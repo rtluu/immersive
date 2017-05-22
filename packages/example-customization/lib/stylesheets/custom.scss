@@ -1,18 +1,36 @@
-.logo-hello {
-  display: flex;
-  justify-content: center;
-  color: #333;
-}
+body{
+  background: #fafafa;
+  font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
 
-.post-red{
-  background-color: #FFD3D2;
-}
-.post-blue{
-  background-color: #D2F5FF;
-}
-.post-yellow{
-  background-color: #FBFFD2;
-}
-.post-green{
-  background-color: #D2FFD2;
+  #react-app{
+
+    .wrapper{
+
+      .header-wrapper{
+
+        .header{
+
+          .search{
+
+          }
+
+          .nav{
+
+          }
+        }
+      }
+
+      .main{
+
+        .newsletter{
+          display: none !important;
+        }
+
+      }
+
+      .footer{
+
+      }
+    }
+  }
 }

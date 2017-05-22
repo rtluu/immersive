@@ -26,6 +26,12 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
           <Components.Vote collection={Posts} document={post} currentUser={this.props.currentUser}/>
         </div>
 
+        <div className="posts-item-comments">
+          <Link to={Posts.getPageUrl(post)}>
+            <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+          </Link>
+        </div>
+
         {post.thumbnailUrl ? <Components.PostsThumbnail post={post}/> : null}
 
         <div className="posts-item-content">
@@ -34,17 +40,11 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
               {post.title}
             </Link>
-            {this.renderCategories()}
           </h3>
 
           <div className="posts-item-meta">
-            {post.user? <div className="posts-item-user"><Components.UsersAvatar user={post.user} size="small"/><Components.UsersName user={post.user}/></div> : null}
             <div className="posts-item-date"><FormattedRelative value={post.postedAt}/></div>
-            <div className="posts-item-comments">
-              <Link to={Posts.getPageUrl(post)}>
-                <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
-              </Link>
-            </div>
+            {post.user? <div className="posts-item-user"><Components.UsersAvatar user={post.user} size="small"/><Components.UsersName user={post.user}/></div> : null}
             {this.props.currentUser && this.props.currentUser.isAdmin ? <Components.PostsStats post={post} /> : null}
             {Posts.options.mutations.edit.check(this.props.currentUser, post) ? this.renderActions() : null}
           </div>

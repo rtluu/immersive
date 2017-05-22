@@ -13,9 +13,10 @@ Package.onUse( function(api) {
 
   api.mainModule('server.js', 'server');
   api.mainModule('client.js', 'client');
-  
+
   api.addFiles([
-    'lib/stylesheets/custom.scss'
+    'lib/stylesheets/custom.scss',
+    'lib/stylesheets/posts.scss'
   ], ['client']);
 
   api.addAssets([

@@ -40,8 +40,8 @@ addStrings('en', {
   "forms.select_option": "-- select option --",
   "forms.delete": "Delete",
   "forms.delete_confirm": "Delete document?",
-  
-  "posts.new_post": "New Post",
+
+  "posts.new_post": "Submit Post",
   "posts.edit": "Edit",
   "posts.edit_success": "Post “{title}” edited.",
   "posts.delete": "Delete",
@@ -85,7 +85,7 @@ addStrings('en', {
   "posts.like": "Like",
 
   "comments.comments": "Comments",
-  "comments.count": "{count, plural, =0 {No comments} one {# comment} other {# comments}}",
+  "comments.count": "{count, plural, =0 {0} one {# } other {# }}",
   "comments.new": "New Comment",
   "comments.no_comments": "No comments to display.",
   "comments.reply": "Reply",
@@ -106,7 +106,7 @@ addStrings('en', {
   "users.edit_success": "User “{name}” edited",
   "users.log_in": "Log In",
   "users.sign_up": "Sign Up",
-  "users.sign_up_log_in": "Sign Up/Log In",
+  "users.sign_up_log_in": "Sign in",
   "users.log_out": "Log Out",
   "users.bio": "Bio",
   "users.displayName": "Display Name",
@@ -198,7 +198,7 @@ addStrings('en', {
   "app.disallowed_property_detected": "Disallowed property detected: {value}",
   "app.something_bad_happened": "Something bad happened...",
   "app.embedly_not_authorized": "Invalid Embedly API key provided in the settings file. To find your key, log into https://app.embed.ly -> API",
-  
+
   "newsletter": "Newsletter",
   "newsletter.subscribe": "Subscribe",
   "newsletter.unsubscribe": "Unsubscribe",

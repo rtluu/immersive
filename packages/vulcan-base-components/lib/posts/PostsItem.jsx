@@ -23,7 +23,7 @@ class PostsItem extends Component {
       </div>
     )
   }
-  
+
   render() {
 
     const {post} = this.props;

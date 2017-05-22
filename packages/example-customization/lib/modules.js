@@ -1,5 +1,5 @@
 /*
-Let's import all our files here. 
+Let's import all our files here.
 */
 
 // general business logic of this customization
@@ -15,6 +15,14 @@ import "./components/CustomLogo.jsx";
 import "./components/CustomNewsletter.jsx";
 import "./components/CustomPostsItem.jsx";
 import "./components/MyCustomPage.jsx";
+import "./components/CustomHeader.jsx";
+import "./components/CustomFooter.jsx";
+import "./components/CustomListHeader.jsx";
+import "./components/CustomPostsHome.jsx";
+import "./components/CustomPostsNewButton.jsx";
+import "./components/CustomPostsViews.jsx";
+
+
 
 // custom routes
 import "./routes.jsx";

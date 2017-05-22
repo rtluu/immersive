@@ -1,5 +1,5 @@
 import React from 'react';
-import { withCurrentUser, getSetting, Components, registerComponent } from 'meteor/vulcan:core';
+import { withCurrentUser, getSetting, Components, replaceComponent } from 'meteor/vulcan:core';
 
 const Header = (props, context) => {
 
@@ -37,4 +37,4 @@ Header.propTypes = {
   currentUser: React.PropTypes.object,
 };
 
-registerComponent('Header', Header, withCurrentUser);
+replaceComponent('Header', Header, withCurrentUser);

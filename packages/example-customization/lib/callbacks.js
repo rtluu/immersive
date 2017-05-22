@@ -7,7 +7,7 @@ import { addCallback } from 'meteor/vulcan:core';
 
 function PostsNewAddRandomEmoji (post, user) {
 
-  post.title = post.title + " " +_.sample(["🎉", "💎", "☠", "⏱", "🎈", "⛱"])
+  post.title = post.title;
 
   return post;
 }

@@ -1,0 +1,81 @@
+//Posts
+.posts-list, .posts-daily{
+  margin: 0 auto;
+  max-width: 616px;
+
+  .posts-list-header{
+
+    .hero-headline{
+      color: black;
+      font-family: Times;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    //Hide Categories
+    .posts-list-header-categories{
+      display: none;
+    }
+
+    //Views Button
+    .posts-views{
+      bottom: 50px;
+      right: 0;
+      position: fixed;
+    }
+  }
+
+  .posts-list-content{
+
+    .posts-item{
+      border-bottom: none;
+
+      .posts-item-vote{
+
+      }
+
+      .posts-item-comments{
+
+      }
+
+      .posts-thumbnail{
+        display: none;
+      }
+
+      .posts-item-content{
+
+        .posts-item-title{
+          font-size: 21px;
+          font-weight: 500;
+        }
+
+        .posts-item-meta{
+
+          .posts-item-date{
+
+          }
+
+          .posts-item-user{
+
+
+            .users-avatar{
+              display: none !important;
+            }
+          }
+
+          .posts-stats{
+            display: none;
+          }
+
+
+
+        }
+      }
+
+      .posts-commenters{
+        display: none;
+      }
+    }
+  }
+
+}
