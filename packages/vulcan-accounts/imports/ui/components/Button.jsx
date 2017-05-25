@@ -11,13 +11,14 @@ export class AccountsButton extends React.Component {
       type,
       disabled = false,
       className,
-      onClick
+      onClick,
+      id,
     } = this.props;
 
-    return type === 'link' ? 
-      <a href="#" className={ className } onClick={ onClick } style={{marginRight: '10px'}}>{ label }</a> :
+    return type === 'link' ?
+      <a href="#" className={ className } onClick={ onClick } >{ label }</a> :
       <Button
-        style={{marginRight: '10px'}}
+        id={id}
         bsStyle="primary"
         className={ className }
         type={ type }

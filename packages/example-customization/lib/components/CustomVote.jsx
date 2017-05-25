@@ -1,4 +1,4 @@
-import { Components, registerComponent, withMessages } from 'meteor/vulcan:core';
+import { Components, replaceComponent, withMessages } from 'meteor/vulcan:core';
 import React, { PropTypes, Component } from 'react';
 import classNames from 'classnames';
 import { withVote, hasUpvoted, hasDownvoted } from 'meteor/vulcan:voting';
@@ -94,4 +94,4 @@ Vote.contextTypes = {
   intl: intlShape
 };
 
-registerComponent('Vote', Vote, withMessages, withVote);
+replaceComponent('Vote', Vote, withMessages, withVote);

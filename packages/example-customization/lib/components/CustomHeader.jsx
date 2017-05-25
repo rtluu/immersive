@@ -12,9 +12,18 @@ const Header = (props, context) => {
 
       <header className="header">
 
-        <Components.SearchForm/>
+        <div className="nav-left">
+          <a href="/">
+            <div className="logo-mark" />
+          </a>
+        </div>
 
-        <div className="nav">
+
+        <div className="nav-right">
+
+          <a className="home-link" href="/">
+            <div className="discussion">Discussion</div>
+          </a>
 
           <div className="nav-user">
             {!!props.currentUser ? <Components.UsersMenu/> : <Components.UsersAccountMenu/>}
@@ -23,7 +32,6 @@ const Header = (props, context) => {
           <div className="nav-new-post">
             <Components.PostsNewButton/>
           </div>
-
         </div>
 
       </header>

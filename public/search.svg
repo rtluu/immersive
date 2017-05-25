@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web_V1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Web-Home-V1-Copy" transform="translate(-48.000000, -41.000000)" fill-rule="nonzero" fill="#8A8A8A">
+            <g id="Search" transform="translate(48.000000, 40.000000)">
+                <path d="M12.2501107,11.361272 L16,15.1111612 L14.1111612,17 L10.361272,13.2501107 C7.76835849,14.9679812 4.24046731,14.6846611 1.95595658,12.4001504 C-0.651985527,9.79220828 -0.651985527,5.56389869 1.95595658,2.95595658 C4.56389869,0.348014473 8.79220828,0.348014473 11.4001504,2.95595658 C13.6846611,5.24046731 13.9679812,8.76835849 12.2501107,11.361272 Z M9.51131162,10.5113116 C11.0760769,8.94654636 11.0760769,6.4095606 9.51131162,4.84479534 C7.94654636,3.28003008 5.4095606,3.28003008 3.84479534,4.84479534 C2.28003008,6.4095606 2.28003008,8.94654636 3.84479534,10.5113116 C5.4095606,12.0760769 7.94654636,12.0760769 9.51131162,10.5113116 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

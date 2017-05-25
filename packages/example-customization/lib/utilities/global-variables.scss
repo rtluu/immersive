@@ -1,0 +1,48 @@
+/**********************************
+*                                 *
+*     GENERAL BRANDING COLORS     *
+*                                 *
+***********************************/
+
+$stash-purple: #7A3DFE;
+$secondary-purple: #A968FE;
+$light-gray: #c2c2c2;
+$dark-gray: #29292E;
+
+
+/**********************************
+*                                 *
+*            FAKT FONTS           *
+*                                 *
+***********************************/
+
+
+@font-face {
+    font-family: 'FaktProNormal';
+    src: url('/fakt-font/FaktProNormal.eot');
+    src: url('/fakt-font/FaktProNormal.eot') format('embedded-opentype'),
+         url('/fakt-font/FaktProNormal.woff2') format('woff2'),
+         url('/fakt-font/FaktProNormal.woff') format('woff'),
+         url('/fakt-font/FaktProNormal.ttf') format('truetype'),
+         url('/fakt-font/FaktProNormal.svg#FaktProNormal') format('svg');
+}
+
+@font-face {
+    font-family: 'FaktProMedium';
+    src: url('/fakt-font/FaktProMedium.eot');
+    src: url('/fakt-font/FaktProMedium.eot') format('embedded-opentype'),
+         url('/fakt-font/FaktProMedium.woff2') format('woff2'),
+         url('/fakt-font/FaktProMedium.woff') format('woff'),
+         url('/fakt-font/FaktProMedium.ttf') format('truetype'),
+         url('/fakt-font/FaktProMedium.svg#FaktProMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'FaktProSemiBold';
+    src: url('/fakt-font/FaktProSemiBold.eot');
+    src: url('/fakt-font/FaktProSemiBold.eot') format('embedded-opentype'),
+         url('/fakt-font/FaktProSemiBold.woff2') format('woff2'),
+         url('/fakt-font/FaktProSemiBold.woff') format('woff'),
+         url('/fakt-font/FaktProSemiBold.ttf') format('truetype'),
+         url('/fakt-font/FaktProSemiBold.svg#FaktProSemiBold') format('svg');
+}

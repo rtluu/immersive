@@ -1,4 +1,4 @@
-import { registerComponent, withCurrentUser } from 'meteor/vulcan:core';
+import { replaceComponent, withCurrentUser } from 'meteor/vulcan:core';
 import React, { PropTypes, Component } from 'react';
 import { FormattedMessage, intlShape } from 'react-intl';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
@@ -51,4 +51,4 @@ PostsViews.contextTypes = {
 
 PostsViews.displayName = "PostsViews";
 
-registerComponent('PostsViews', PostsViews, withCurrentUser, withRouter);
+replaceComponent('PostsViews', PostsViews, withCurrentUser, withRouter);

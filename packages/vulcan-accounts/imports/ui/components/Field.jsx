@@ -52,7 +52,8 @@ export class AccountsField extends React.Component {
     }
     return mount ? (
       <div className={ className } style={{marginBottom: '10px'}}>
-        <FormControl id={ id } type={ type } inputRef={ref => { this.input = ref; }} onChange={ onChange } placeholder={ hint } defaultValue={ defaultValue } />
+        <div className="field-type">{hint}</div>
+        <FormControl id={ id } type={ type } inputRef={ref => { this.input = ref; }} onChange={ onChange } defaultValue={ defaultValue } />
         {message && (
           <span className={['message', message.type].join(' ').trim()}>
             {message.message}</span>

@@ -44,7 +44,7 @@ class PostsItem extends Component {
 
           <h3 className="posts-item-title">
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
-              {post.title}
+              {post.title}{post.cutUrl}
             </Link>
             {this.renderCategories()}
           </h3>

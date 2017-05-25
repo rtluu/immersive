@@ -11,6 +11,7 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
     const post = this.props.post;
 
     let postClass = "posts-item";
+
     if (post.sticky) postClass += " posts-sticky";
 
     // ⭐ custom code starts here ⭐
@@ -18,6 +19,16 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
       postClass += " post-"+post.color;
     }
     // ⭐ custom code ends here ⭐
+    var isLink = Posts.getLink(post).indexOf('://');
+    if( isLink === -1){
+      var cutUrl = "";
+    } else{
+      var decodedUrl = decodeURIComponent(Posts.getLink(post));
+      var cutUrl     = decodedUrl.split('url=http')[1] + '';
+      cutUrl = cutUrl.split('://')[1] + '';
+      cutUrl = cutUrl.split('/')[0] + '';
+      cutUrl = "" + cutUrl + "";
+    }
 
     return (
       <div className={postClass}>
@@ -28,7 +39,10 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
 
         <div className="posts-item-comments">
           <Link to={Posts.getPageUrl(post)}>
-            <FormattedMessage id="comments.count" values={{count: post.commentCount}}/>
+            <div className="comment-button">
+              <div className="comment-icon" />
+              <FormattedMessage className="vote-count" id="comments.count" values={{count: post.commentCount}}/>
+            </div>
           </Link>
         </div>
 
@@ -38,7 +52,12 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
 
           <h3 className="posts-item-title">
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
-              {post.title}
+              {post.title + " "}
+              <div className="source-container">
+                <span className="paren">(</span>
+                <div className="source">{cutUrl}</div>
+                <span className="paren">)</span>
+              </div>
             </Link>
           </h3>
 

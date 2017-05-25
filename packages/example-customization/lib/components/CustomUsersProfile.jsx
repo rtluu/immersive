@@ -1,4 +1,4 @@
-import { Components, registerComponent, withDocument, withCurrentUser } from 'meteor/vulcan:core';
+import { Components, replaceComponent, withDocument, withCurrentUser } from 'meteor/vulcan:core';
 import React, { PropTypes, Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Users from 'meteor/vulcan:users';
@@ -24,15 +24,15 @@ const UsersProfile = (props) => {
       <div className="page users-profile">
         <Components.HeadTags url={Users.getProfileUrl(user, true)} title={Users.getDisplayName(user)} />
         <h2 className="page-title"><a href="/">Immersi.ve</a> <span>/</span> {Users.getDisplayName(user)}</h2>
-        {user.htmlBio ? <div dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
-        <ul>
+        {user.htmlBio ? <div className="users-bio" dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
+        <ul className="users-info">
           {user.twitterUsername ? <li><a href={"http://twitter.com/" + user.twitterUsername}>@{user.twitterUsername}</a></li> : null }
           {user.website ? <li><a href={user.website}>{user.website}</a></li> : null }
           <Components.ShowIf check={Users.options.mutations.edit.check} document={user}>
             <li><Link to={Users.getEditUrl(user)}><FormattedMessage id="users.edit_account"/></Link></li>
           </Components.ShowIf>
         </ul>
-        <h3><FormattedMessage id="users.posts"/></h3>
+        <h3 className="posts-header"><FormattedMessage id="users.posts"/></h3>
         <Components.PostsList terms={terms} showHeader={false} />
       </div>
     )
@@ -51,4 +51,4 @@ const options = {
   fragmentName: 'UsersProfile',
 };
 
-registerComponent('UsersProfile', UsersProfile, withCurrentUser, [withDocument, options]);
+replaceComponent('UsersProfile', UsersProfile, withCurrentUser, [withDocument, options]);

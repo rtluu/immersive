@@ -109,7 +109,7 @@ export class AccountsLoginForm extends Tracker.Component {
       }
 
       const loggingInMessage = this.context.intl.formatMessage({id: 'accounts.logging_in'});
-      
+
       if (this.state.formState == STATES.PROFILE) {
         if (!this.props.currentUser && this.state.messages.length === 0) {
           this.showMessage(loggingInMessage);
@@ -155,7 +155,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getUsernameOrEmailField() {
     return {
       id: 'usernameOrEmail',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_username_or_email'}),
+      hint: "Username or Email",
       label: this.context.intl.formatMessage({id: 'accounts.username_or_email'}),
       required: true,
       defaultValue: this.state.currentUsername || "",
@@ -167,7 +167,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getUsernameField() {
     return {
       id: 'username',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_username'}),
+      hint: "Username",
       label: this.context.intl.formatMessage({id: 'accounts.username'}),
       required: true,
       defaultValue: this.state.currentUsername || "",
@@ -179,7 +179,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getEmailField() {
     return {
       id: 'email',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_email'}),
+      hint: "Email",
       label: this.context.intl.formatMessage({id: 'accounts.email'}),
       type: 'email',
       required: true,
@@ -192,7 +192,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getPasswordField() {
     return {
       id: 'password',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_password'}),
+      hint: "Password",
       label: this.context.intl.formatMessage({id: 'accounts.password'}),
       type: 'password',
       required: true,
@@ -205,7 +205,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getSetPasswordField() {
     return {
       id: 'newPassword',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_password'}),
+      hint: "Enter Password",
       label: this.context.intl.formatMessage({id: 'accounts.choose_password'}),
       type: 'password',
       required: true,
@@ -216,7 +216,7 @@ export class AccountsLoginForm extends Tracker.Component {
   getNewPasswordField() {
     return {
       id: 'newPassword',
-      hint: this.context.intl.formatMessage({id: 'accounts.enter_new_password'}),
+      hint: "New Password",
       label: this.context.intl.formatMessage({id: 'accounts.new_password'}),
       type: 'password',
       required: true,
@@ -326,18 +326,52 @@ export class AccountsLoginForm extends Tracker.Component {
     if (currentUser && formState == STATES.PROFILE) {
       loginButtons.push({
         id: 'signOut',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_out'}),
+        label: "Sign out",
         disabled: waiting,
         onClick: this.signOut.bind(this)
+      });
+    }
+
+    if (this.showForgotPasswordLink()) {
+      loginButtons.push({
+        id: 'switchToPasswordReset',
+        label: "Forgot password?",
+        type: 'link',
+        href: resetPasswordPath,
+        className: 'forgot',
+        onClick: this.switchToPasswordReset.bind(this)
+      });
+    }
+
+    if (formState == STATES.SIGN_UP) {
+      loginButtons.push({
+        id: 'signUp',
+        label: "Sign up for Immersi.ve",
+        type: hasPasswordService() ? 'submit' : 'link',
+        disabled: waiting,
+        className: 'signup',
+        onClick: hasPasswordService() ? this.signUp.bind(this, {}) : null
+      });
+    }
+
+    if (this.showSignInLink()) {
+      loginButtons.push({
+        id: 'signIn',
+        label: "Log in to Immersi.ve",
+        type: hasPasswordService() ? 'submit' : 'link',
+        disabled: waiting,
+        className: 'login',
+        onClick: hasPasswordService() ? this.signIn.bind(this) : null
       });
     }
 
     if (this.showCreateAccountLink()) {
       loginButtons.push({
         id: 'switchToSignUp',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
+        label: 'Sign up',
         type: 'link',
         href: signUpPath,
+        className: 'switch signup',
         onClick: this.switchToSignUp.bind(this)
       });
     }
@@ -345,20 +379,11 @@ export class AccountsLoginForm extends Tracker.Component {
     if (formState == STATES.SIGN_UP || formState == STATES.PASSWORD_RESET) {
       loginButtons.push({
         id: 'switchToSignIn',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_in'}),
+        label: "Log in",
         type: 'link',
         href: loginPath,
+        className: 'switch login',
         onClick: this.switchToSignIn.bind(this)
-      });
-    }
-
-    if (this.showForgotPasswordLink()) {
-      loginButtons.push({
-        id: 'switchToPasswordReset',
-        label: this.context.intl.formatMessage({id: 'accounts.forgot_password'}),
-        type: 'link',
-        href: resetPasswordPath,
-        onClick: this.switchToPasswordReset.bind(this)
       });
     }
 
@@ -376,34 +401,13 @@ export class AccountsLoginForm extends Tracker.Component {
       });
     }
 
-    if (formState == STATES.SIGN_UP) {
-      loginButtons.push({
-        id: 'signUp',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_up'}),
-        type: hasPasswordService() ? 'submit' : 'link',
-        className: 'active',
-        disabled: waiting,
-        onClick: hasPasswordService() ? this.signUp.bind(this, {}) : null
-      });
-    }
-
-    if (this.showSignInLink()) {
-      loginButtons.push({
-        id: 'signIn',
-        label: this.context.intl.formatMessage({id: 'accounts.sign_in'}),
-        type: hasPasswordService() ? 'submit' : 'link',
-        className: 'active',
-        disabled: waiting,
-        onClick: hasPasswordService() ? this.signIn.bind(this) : null
-      });
-    }
-
     if (formState == STATES.PASSWORD_RESET) {
       loginButtons.push({
         id: 'emailResetLink',
         label: this.context.intl.formatMessage({id: 'accounts.reset_your_password'}),
         type: 'submit',
         disabled: waiting,
+        className: 'reset',
         onClick: this.passwordReset.bind(this)
       });
     }
@@ -923,11 +927,12 @@ export class AccountsLoginForm extends Tracker.Component {
 
     return (
       <Components.AccountsForm
+        message={message}
         oauthServices={this.oauthButtons()}
         fields={this.fields()} 
         buttons={this.buttons()}
         {...this.state}
-        message={message}
+
       />
     );
   }

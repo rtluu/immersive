@@ -1,4 +1,4 @@
-import { Components, registerComponent, withCurrentUser } from 'meteor/vulcan:core';
+import { Components, replaceComponent, withCurrentUser } from 'meteor/vulcan:core';
 import React, { PropTypes, Component } from 'react';
 import { FormattedMessage, intlShape } from 'react-intl';
 import { Button } from 'react-bootstrap';
@@ -25,4 +25,4 @@ PostsNewButton.contextTypes = {
   intl: intlShape
 };
 
-registerComponent('PostsNewButton', PostsNewButton, withCurrentUser);
+replaceComponent('PostsNewButton', PostsNewButton, withCurrentUser);

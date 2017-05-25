@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FaktProMedium';
+    src: url('fonts/FaktProMedium.eot');
+    src: url('fonts/FaktProMedium.eot') format('embedded-opentype'),
+         url('fonts/FaktProMedium.woff2') format('woff2'),
+         url('fonts/FaktProMedium.woff') format('woff'),
+         url('fonts/FaktProMedium.ttf') format('truetype'),
+         url('fonts/FaktProMedium.svg#FaktProMedium') format('svg');
+}

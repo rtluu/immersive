@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'FaktProSemiBold';
+    src: url('fonts/FaktProSemiBold.eot');
+    src: url('fonts/FaktProSemiBold.eot') format('embedded-opentype'),
+         url('fonts/FaktProSemiBold.woff2') format('woff2'),
+         url('fonts/FaktProSemiBold.woff') format('woff'),
+         url('fonts/FaktProSemiBold.ttf') format('truetype'),
+         url('fonts/FaktProSemiBold.svg#FaktProSemiBold') format('svg');
+}

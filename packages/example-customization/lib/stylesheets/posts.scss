@@ -1,81 +1,248 @@
-//Posts
 .posts-list, .posts-daily{
-  margin: 0 auto;
-  max-width: 616px;
+  background: white;
+  padding: 0 24px;
+  position: relative;
 
-  .posts-list-header{
+  .posts-header{
+    position: absolute;
+    left: 0;
+    top: -23px;
 
-    .hero-headline{
-      color: black;
-      font-family: Times;
-      font-size: 32px;
-      font-weight: 600;
-    }
-
-    //Hide Categories
-    .posts-list-header-categories{
-      display: none;
-    }
-
-    //Views Button
-    .posts-views{
-      bottom: 50px;
-      right: 0;
-      position: fixed;
+    .sub-head{
+      color: #999999;
+      font-size: 12px;
+      font-family: 'FaktProNormal';
+      position: relative;
     }
   }
 
+
+
+  .posts-list-header{
+    margin: 0;
+
+    h2{
+      margin: 0;
+    }
+
+  }
+
   .posts-list-content{
+      border-top: 0;
+      margin-bottom: 0;
 
     .posts-item{
-      border-bottom: none;
+      border-bottom: 1px solid #f2f2f2;
+      padding: 24px 0;
+      position: relative;
 
       .posts-item-vote{
+        position: absolute;
+        margin-right: 16px;
+        top: 24px;
 
-      }
+        .vote{
+          cursor: pointer;
 
-      .posts-item-comments{
+          &:hover{
+            .upvote-button{
+              opacity: 0.8;
 
-      }
-
-      .posts-thumbnail{
-        display: none;
-      }
-
-      .posts-item-content{
-
-        .posts-item-title{
-          font-size: 21px;
-          font-weight: 500;
-        }
-
-        .posts-item-meta{
-
-          .posts-item-date{
-
-          }
-
-          .posts-item-user{
-
-
-            .users-avatar{
-              display: none !important;
+              .vote-count{
+                opacity: 0.8;
+              }
             }
           }
 
-          .posts-stats{
-            display: none;
+          &.upvoted{
+            .upvote-button{
+              &:before{
+                background: black;
+              }
+
+
+              .upvote{
+                opacity: 0.8;
+                -webkit-filter: brightness(0) invert(1);
+                   -moz-filter: brightness(0) invert(1);
+                     -o-filter: brightness(0) invert(1);
+                        filter: brightness(0) invert(1);
+              }
+              .vote-count{
+                color: black;
+              }
+            }
           }
 
+          .upvote-button{
+            background: none;
+            border: 0;
+            height: 30px;
+            padding: 0;
+            position: relative;
+            width: 30px;
+
+            &:before{
+              content: '';
+              background: #e8e8e8;
+              border-radius: 50%;
+              height: 30px;
+              position: absolute;
+              width: 30px;
+            }
 
 
+            .upvote{
+              background-image: url("/upvote.svg");
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 10px 6px;
+              height: 6px;
+              width: 10px;
+              z-index: 1;
+            }
+
+            .vote-count{
+              bottom: -24px;
+              font-size: 14px;
+              padding-top: 3px;
+              position: absolute;
+              width: 30px;
+            }
+          }
         }
       }
 
-      .posts-commenters{
-        display: none;
+      .posts-item-comments{
+        position: absolute;
+        margin-right: 24px;
+        left: 46px;
+        top: 24px;
+
+        &:hover{
+          .comment-button{
+            opacity: 0.8;
+
+            span{
+              opacity: 0.8;
+            }
+          }
+        }
+
+        .comment-button{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          background: #e8e8e8;
+          border: 0;
+          border-radius: 50%;
+          height: 30px;
+          position: relative;
+          width: 30px;
+
+          .comment-icon{
+            background-image: url("/comment.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10px 10px;
+            height: 10px;
+            width: 10px;
+          }
+
+          span{
+            bottom: -24px;
+            color: black;
+            font-size: 14px;
+            padding-top: 3px;
+            position: absolute;
+            text-align: center;
+            width: 30px;
+          }
+        }
       }
+
+
+      .posts-item-content{
+        margin-left: 100px;
+
+        .posts-item-title{
+          font-family: 'FaktProMedium';
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 4px;
+          margin-top: -4px;
+          position: relative;
+
+          .source-container{
+            display: inline-block;
+            position: relative;
+
+            .paren{
+              display: inline-block;
+              font-family: 'FaktProNormal';
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 26px;
+            }
+
+            .source{
+              font-family: 'FaktProNormal';
+              color: #0275d8;
+              display: inline-block;
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 26px;
+              margin: 0 2px;
+
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+
+        .posts-item-meta{
+          color: #8a8a8a;
+          font-size: 14px;
+
+          .posts-item-date{
+            margin-right: 12px;
+          }
+
+          .posts-item-user{
+            text-decoration: underline;
+
+            a{
+              color: #8a8a8a;
+              margin-right: 12px;
+
+              &:hover{
+                color: #0275d8;
+              }
+            }
+          }
+
+          .posts-actions{
+            .modal-trigger{
+              a{
+                color: #8a8a8a;
+
+                &:hover{
+                  color: #0275d8;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+
     }
+  }
+
+  .posts-no-more{
+    display: none;
   }
 
 }

@@ -9,7 +9,7 @@ const Layout = ({currentUser, children}) =>
     {currentUser ? <Components.UsersProfileCheck currentUser={currentUser} documentId={currentUser._id} /> : null}
 
     <Components.Header />
-  
+
     <div className="main">
 
       <Components.FlashMessages />
@@ -19,9 +19,9 @@ const Layout = ({currentUser, children}) =>
       {children}
 
     </div>
-  
+
     <Components.Footer />
-  
+
   </div>
 
 registerComponent('Layout', Layout, withCurrentUser);

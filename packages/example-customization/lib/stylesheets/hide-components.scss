@@ -1,0 +1,95 @@
+//Posts
+
+.main{
+
+  .newsletter{
+    display: none !important;
+  }
+
+}
+
+.posts-list, .posts-daily{
+
+  .posts-day{
+    border: none;
+    margin: 0;
+
+    .posts-day-heading{
+      display: none;
+    }
+
+    .posts-list{
+
+      .posts-list-content{
+        border: none;
+        margin: 0;
+      }
+    }
+
+    .posts-no-more{
+      display: none;
+    }
+  }
+
+  .posts-list-header{
+
+    //Hide Categories
+    .posts-list-header-categories{
+      display: none;
+    }
+
+    //Views Button
+    .posts-views{
+      display: none;
+    }
+  }
+
+  .posts-list-content{
+
+    .posts-item{
+      border-bottom: none;
+
+      .posts-item-vote{
+
+      }
+
+      .posts-item-comments{
+
+      }
+
+      .posts-thumbnail{
+        display: none;
+      }
+
+      .posts-item-content{
+
+        .posts-item-meta{
+
+          .posts-item-date{
+
+          }
+
+          .posts-item-user{
+
+
+            .users-avatar{
+              display: none !important;
+            }
+          }
+
+          .posts-stats{
+            display: none;
+          }
+
+
+
+        }
+      }
+
+      .posts-commenters{
+        display: none;
+      }
+    }
+  }
+
+}

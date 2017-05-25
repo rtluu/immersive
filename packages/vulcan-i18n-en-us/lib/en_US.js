@@ -42,7 +42,7 @@ addStrings('en', {
   "forms.delete_confirm": "Delete document?",
 
   "posts.new_post": "Submit Post",
-  "posts.edit": "Edit",
+  "posts.edit": "Edit post",
   "posts.edit_success": "Post “{title}” edited.",
   "posts.delete": "Delete",
   "posts.delete_confirm": "Delete post “{title}”?",
@@ -72,7 +72,7 @@ addStrings('en', {
   "posts.enter_thumbnail_url": "Enter URL",
   "posts.created_message": "Post created.",
   "posts.rate_limit_error": "Please wait {value} seconds before posting again.",
-  "posts.sign_up_or_log_in_first": "Please sign up or log in first.",
+  "posts.sign_up_or_log_in_first": "To submit a post Sign Up or Login",
   "posts.postedAt": "Posted at",
   "posts.dateNotDefined": "Date not defined",
   "posts.subscribe": "Subscribe",

@@ -15,8 +15,15 @@ Package.onUse( function(api) {
   api.mainModule('client.js', 'client');
 
   api.addFiles([
-    'lib/stylesheets/custom.scss',
-    'lib/stylesheets/posts.scss'
+    'lib/stylesheets/app.scss',
+    'lib/stylesheets/header.scss',
+    'lib/stylesheets/hide-components.scss',
+    'lib/stylesheets/guidelines.scss',
+    'lib/stylesheets/login-form.scss',
+    'lib/stylesheets/nav.scss',
+    'lib/stylesheets/posts.scss',
+    'lib/stylesheets/submit-login-form.scss',
+    'lib/stylesheets/user-profile.scss'
   ], ['client']);
 
   api.addAssets([

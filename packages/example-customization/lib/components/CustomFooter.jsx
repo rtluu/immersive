@@ -1,4 +1,4 @@
-import { registerComponent } from 'meteor/vulcan:core';
+import { replaceComponent } from 'meteor/vulcan:core';
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
@@ -10,4 +10,4 @@ const Footer = props => {
 
 Footer.displayName = "Footer";
 
-registerComponent('Footer', Footer);
+replaceComponent('Footer', Footer);

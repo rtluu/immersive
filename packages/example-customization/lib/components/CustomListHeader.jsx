@@ -1,12 +1,12 @@
-import { Components, registerComponent } from 'meteor/vulcan:core';
+import { Components, replaceComponent } from 'meteor/vulcan:core';
 import React from 'react';
 
 const PostsListHeader = () => {
 
   return (
-    <div>
+    <div className="posts-header">
+      <div className="sub-head">DISCUSSION</div>
       <div className="posts-list-header">
-        <h2 className="hero-headline">Immersi.ve - A community driven by sharing virtual reality.</h2>
         <div className="posts-list-header-categories">
           <Components.CategoriesList />
         </div>
@@ -18,4 +18,4 @@ const PostsListHeader = () => {
 
 PostsListHeader.displayName = "PostsListHeader";
 
-registerComponent('PostsListHeader', PostsListHeader);
+replaceComponent('PostsListHeader', PostsListHeader);

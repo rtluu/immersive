@@ -1,0 +1,241 @@
+.header-wrapper{
+  background: white;
+  margin-bottom: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .header{
+    box-sizing: content-box;
+    display: block;
+    height: 24px;
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 20px 0;
+    position: relative;
+
+    .nav-left{
+      display: inline-block;
+      left: 0;
+      position: absolute;
+
+      .logo-mark{
+        background: url('/immersive.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 120px 13px;
+        display: inline-block;
+        height: 13px;
+        padding: 6px 0;
+        position: absolute;
+        width: 120px;
+      }
+
+      .search-form{
+        width: 205px;
+        form{
+          display: inline-block;
+
+          &:before{
+            content: url('');
+            background: url('/search.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
+            display: inline-block;
+            height: 16px;
+            position: absolute;
+            top: 5px;
+            width: 16px;
+            z-index: -1;
+          }
+
+          .search-form-reset{
+            right: 0;
+            top: 1px;
+          }
+
+          .form-control{
+            background: 0;
+            border: 0;
+            box-sizing: content-box;
+            display: inline-block;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 5px 5px 5px 24px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+    .nav-right{
+      position: absolute;
+      right: 0;
+      top: 16px;
+
+      .home-link{
+        color: black;
+        display: inline-block;
+        font-size: 14px;
+        padding: 4px 8px;
+        margin-right: 16px;
+        text-decoration: none;
+
+        &:hover{
+          color: #0275d8;
+        }
+      }
+
+      .nav-user{
+        display: inline-block;
+
+        //Logged In
+        .users-menu{
+          margin-left: 8px;
+
+          .dropdown{
+
+            .dropdown-toggle{
+              border: 0;
+
+              &:after{
+                display: none;
+              }
+
+              .caret{
+                display: none;
+              }
+
+              .users-menu-name, span{
+                color: #8a8a8a;
+                font-size: 14px;
+                padding: 4px 8px;
+
+                &:hover{
+                  color: #0275d8;
+                }
+              }
+
+              .avatar{
+                display: none !important;
+              }
+            }
+
+            .dropdown-menu{
+              border: 1px solid black;
+              border-radius: 0;
+              top: 30px;
+
+              .dropdown-item{
+                background-color: white !important;
+                padding: 0px;
+                font-size: 14px;
+                width: 100%;
+
+                a{
+                  color: #8a8a8a;
+                  display: block;
+                  padding: 4px 16px;
+                  text-decoration: none;
+                  width: calc(100% - 32px);
+
+                  &:hover{
+                    background: #fafafa;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        //Not Registered
+        .users-account-menu{
+          background: #FAFAFA;
+
+          &.open{
+            &::before{
+              background: url('/close-x.svg');
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: 16px 16px;
+              content: '';
+              cursor: pointer;
+              height: 16px;
+              position: fixed;
+              padding: 10px;
+              right: 26px;
+              top: 26px;
+              width: 16px;
+              z-index: 1001;
+            }
+          }
+
+          .dropdown-toggle{
+            border: 0;
+
+            &:after{
+              display: none;
+            }
+
+            .users-menu-name, span{
+              color: #8a8a8a;
+              font-size: 14px;
+              padding: 2px 5px;
+            }
+
+          }
+
+
+          .dropdown-menu{
+            background: #FAFAFA;
+            border: none;
+            border-radius: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+
+      .nav-new-post{
+        display: inline-block;
+        margin-left: 31px;
+        position: relative;
+        top: -1px;
+
+        .modal-trigger{
+          .posts-new-button{
+            border: 0;
+            border-radius: 0;
+            background: black;
+            outline: none;
+            padding: 8px 16px;
+
+            &:hover{
+              background: #0275d8;
+
+              span{
+                color: white;
+              }
+            }
+
+            span{
+              box-sizing: content-box;
+              color: white;
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

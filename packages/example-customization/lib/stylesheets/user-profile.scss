@@ -1,0 +1,43 @@
+.page, .users-profile{
+
+  .page-title{
+    color: black;
+    font-family: 'Helvetica Neue', Helvetica, Times;
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+    a{
+      color: #8a8a8a;
+      border-bottom: 3px solid #8a8a8a;
+      text-decoration: none !important;
+
+      &:hover{
+        color: black;
+        border-bottom: 3px solid black;
+      }
+    }
+
+    span{
+      color: #8a8a8a;
+    }
+  }
+
+  .users-bio{
+    color: #8a8a8a;
+    font-size: 16px;
+
+    p{
+      margin-bottom: 11px;
+    }
+  }
+
+  //Hide additional user-info
+  .users-info{
+    display: none;
+  }
+
+  .posts-header{
+    display: none;
+  }
+}

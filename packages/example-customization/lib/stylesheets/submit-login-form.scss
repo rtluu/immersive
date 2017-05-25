@@ -1,0 +1,95 @@
+.modal-dialog{
+  background: #FAFAFA;
+  border: none;
+  border-radius: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  max-width: 100%;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+
+  .modal-content{
+    background: #FAFAFA;
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+
+    .modal-header{
+      border: 0;
+      position: absolute;
+      right: 26px;
+      padding: 0;
+      top: 26px;
+      z-index: 1;
+
+      button{
+        box-sizing: content-box;
+        outline: none;
+        opacity: 1;
+
+        &:before{
+          background: url('/close-x.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 16px 16px;
+          box-sizing: content-box;
+          content: '';
+          cursor: pointer;
+          height: 16px;
+          padding: 10px;
+          right: 26px;
+          top: 26px;
+          width: 16px;
+          z-index: 1001;
+        }
+
+        span{
+          display: none;
+        }
+      }
+
+      .modal-title{
+        display: none;
+      }
+
+      .close{
+        padding: 10px;
+      }
+    }
+
+    .modal-body{
+      padding: 0;
+      height: 100%;
+
+      .posts-new-form-message{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 64px;
+        width: 100%;
+
+        span{
+          display: inline-block;
+          left: 50%;
+          font-size: 18px;
+          font-weight: 500;
+          font-style: italic;
+          min-width: 280px;
+          position: absolute;
+          transform: translateX(-50%);
+        }
+      }
+
+      .accounts-ui{
+        .buttons{
+          button{
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

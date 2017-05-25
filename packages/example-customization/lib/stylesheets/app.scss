@@ -1,0 +1,20 @@
+@import '../utilities/global-variables';
+
+body{
+  background: #EDEEF4;
+  font-family: 'FaktProNormal', Helvetica, arial, sans-serif;
+
+  .main{
+    margin: 0 auto;
+    max-width: 1020px;
+    padding: 0;
+    position: relative;
+    top: 119px;
+
+    .content{
+      display: inline-block;
+      width: 664px;
+      vertical-align: top;
+    }
+  }
+}

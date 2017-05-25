@@ -1,0 +1,137 @@
+.accounts-ui{
+  display: inline-block;
+  left: 50%;
+  max-width: 280px;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  .fields{
+
+    .field{
+      margin-bottom: 16px !important;
+
+      .field-type{
+        color: #8a8a8a;
+        margin-bottom: 8px;
+        font-size: 12px;
+      }
+
+      input{
+        background: #FAFAFA;
+        border: 1px solid #DDDDDD;
+        border-radius: 0;
+        box-sizing: content-box;
+        font-size: 14px;
+        height: 24px;
+        padding: 11px 16px;
+        width: calc(100% - 32px);
+
+        &#username{
+          &:before{
+            content: 'Username';
+            display: block;
+            font-size: 12px;
+            font-weight: 500;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons{
+
+    button{
+      background: black;
+      border: 0;
+      border-radius: 0;
+      margin-top: 32px;
+      outline: none;
+      padding: 16px 16px;
+      width: calc(100% - 32px) !important;
+
+      &.signup{
+        &:before{
+          border-bottom: 5px solid black;
+          color: black;
+          content: 'Sign up';
+          font-size: 30px;
+          font-weight: bold;
+          left: 0;
+          line-height: 42px;
+          pointer-events: none;
+          position: absolute;
+          top: -72px;
+        }
+      }
+
+      &.login{
+        &:before{
+          border-bottom: 5px solid black;
+          color: black;
+          content: 'Log in';
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 42px;
+          pointer-events: none;
+          right: 0;
+          position: absolute;
+          top: -72px;
+        }
+      }
+
+      &.reset{
+        &:before{
+          border-bottom: 5px solid black;
+          color: black;
+          content: 'Reset';
+          font-size: 30px;
+          font-weight: bold;
+          line-height: 42px;
+          pointer-events: none;
+          left: 0;
+          position: absolute;
+          top: -72px;
+        }
+      }
+    }
+
+    .switch{
+      color: #DDDDDD;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 42px;
+      position: absolute;
+      text-decoration: none;
+      top: -72px;
+
+      &:hover{
+        color: #0057FF;
+      }
+
+      &.signup{
+        left: 0;
+      }
+
+      &.login{
+        right: 0;
+      }
+    }
+
+    .forgot{
+      color: #8a8a8a;
+      font-size: 12px;
+      text-decoration: underline;
+
+      &:hover{
+        color: #0057FF;
+      }
+    }
+  }
+}

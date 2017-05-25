@@ -11,6 +11,7 @@ class Flash extends Component{
 
   componentDidMount() {
     this.props.markAsSeen(this.props.message._id);
+    setTimeout(function() {this.props.clear(this.props.message._id)}.bind(this), 5000);
   }
 
   dismissFlash(e) {
