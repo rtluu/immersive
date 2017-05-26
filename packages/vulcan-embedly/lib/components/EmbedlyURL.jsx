@@ -71,8 +71,6 @@ class EmbedlyURL extends Component {
 
         // update the form
         await this.context.updateCurrentValues({
-          title: title || "",
-          body: description || "",
           // thumbnailUrl: thumbnailUrl || "",
         });
 
