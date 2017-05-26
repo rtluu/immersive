@@ -18,6 +18,7 @@ import "./components/CustomLayout.jsx";
 import "./components/CustomListHeader.jsx";
 import "./components/CustomPostsHome.jsx";
 import "./components/CustomPostsNewButton.jsx";
+import "./components/CustomPostsNewForm.jsx";
 import "./components/CustomPostsViews.jsx";
 import "./components/CustomVote.jsx";
 import "./components/CustomUsersMenu.jsx";

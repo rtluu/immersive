@@ -22,6 +22,7 @@ Package.onUse( function(api) {
     'lib/stylesheets/login-form.scss',
     'lib/stylesheets/posts.scss',
     'lib/stylesheets/submit-login-form.scss',
+    'lib/stylesheets/submit-post.scss',
     'lib/stylesheets/user-profile.scss',
     'lib/utilities/global-variables.scss',
     'lib/utilities/mixins.scss'

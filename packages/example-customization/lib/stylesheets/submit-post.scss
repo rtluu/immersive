@@ -1,0 +1,220 @@
+@import '../utilities/global-variables';
+@import '../utilities/mixins';
+
+.modal-open{
+  #react-app{
+    .wrapper{
+      .main{
+        .content{
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop{
+  display: none;
+  @include transition( none !important );
+  @include transform( none !important );
+}
+
+.modal{
+  overflow: visible !important;
+  @include transition( none !important );
+  @include transform( none !important );
+
+}
+
+.submit-modal{
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  top: 119px;
+  width: 1020px;
+  @include transition( none !important );
+  @include transform( none !important );
+
+  .modal-dialog{
+    background: white;
+    bottom: auto;
+    left: auto;
+    padding: 40px 56px;
+    width: 664px;
+    pointer-events: all;
+    position: relative;
+    right: auto;
+    top: auto;
+    @include transition( none !important );
+    @include transform( none !important );
+
+    .modal-content{
+      background: white;
+
+      .modal-header{
+        background: $background;
+        height: 55px;
+        left: -56px;
+        top: -95px;
+        position: absolute;
+        width: 664px;
+
+        .close{
+          left: 0;
+          float: none;
+          position: relative;
+          top: 13px;
+        }
+      }
+      .modal-body{
+
+        .posts-new-form{
+
+          .submit-headline{
+            font-family: 'FaktProSemiBold';
+            font-size: 21px;
+          }
+
+          .submit-subhead{
+            border-bottom: 1px solid $background;
+            color: $dark-gray;
+            font-size: 16px;
+            padding-bottom: 16px;
+          }
+
+          .document-new{
+            position: relative;
+            form{
+
+              .form-section{
+
+                &:nth-child(3){
+                  display: none;
+                }
+
+                div{
+
+                  .form-group{
+                    margin-bottom: 16px;
+                    .control-label{
+                      font-size: 14px;
+                    }
+                    .col-sm-9{
+
+                      .form-control{
+                        border-radius: 0;
+                        border: 1px solid $background;
+                        font-size: 14px;
+                        padding: 12px 16px 8px 16px;
+                        line-height: 20px;
+                      }
+                    }
+                  }
+
+                  //Have to Switch Places with URL
+                  &.input-title{
+                    margin: 0;
+                    position: absolute;
+                    top: 13px;
+                    width: 100%;
+
+                    .form-group{
+                      margin: 0;
+
+                      .control-label{
+                        padding: 0;
+                      }
+
+                      .col-sm-9{
+                        padding: 0;
+                      }
+                    }
+                  }
+
+                  //^^
+                  &.input-url{
+                    position: relative;
+                    padding-top: 104px;
+
+                    .embedly-form-group{
+
+                      .embedly-form-control{
+
+                        .embedly-url-field{
+                          margin: 0;
+                        }
+                      }
+                    }
+
+                    .embedly-thumbnail{
+                      display: none;
+                    }
+                  }
+
+                  &.input-body{
+                    .form-group{
+                      .control-label{
+                        display: none;
+                      }
+                    }
+                  }
+
+                  &.input-categories{
+                    display: none;
+                  }
+
+                  &.input-color{
+                    display: none;
+                  }
+
+                  .form-group{
+
+                    .control-label{
+                      display: block;
+                      float: none;
+                      width: 100%;
+                    }
+
+                    .col-sm-9{
+                      display: block;
+                      width: 100%;
+                    }
+                  }
+
+                }
+              }
+
+              button{
+                background: none;
+                border-radius: 0;
+                border: 1px solid $background;
+                color: $link-blue;
+                font-size: 14px;
+                padding: 12px 16px 8px 16px;
+
+                &:hover{
+                  background: $link-blue;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          .cancel{
+            bottom: 3px;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            left: 173px;
+            padding: 4px 8px;
+            position: absolute;
+
+            &:hover{
+              color: $link-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
