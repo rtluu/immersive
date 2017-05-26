@@ -1,4 +1,4 @@
-import { Components, registerComponent, getRawComponent, getFragment, withMessages } from 'meteor/vulcan:core';
+import { Components, replaceComponent, getRawComponent, getFragment, withMessages } from 'meteor/vulcan:core';
 import Posts from "meteor/vulcan:posts";
 import React, { PropTypes, Component } from 'react';
 import { intlShape, FormattedMessage } from 'react-intl';
@@ -10,6 +10,9 @@ const PostsNewForm = (props, context) =>
       failureComponent={<div><p className="posts-new-form-message"><FormattedMessage id="posts.sign_up_or_log_in_first" /></p><Components.AccountsLoginForm /></div>}
     >
       <div className="posts-new-form">
+        <h2 className="submit-headline">Post to the community</h2>
+        <h6 className="submit-subhead">Share a link or ask a question</h6>
+
         <Components.SmartForm
           collection={Posts}
           mutationFragment={getFragment('PostsPage')}
@@ -19,6 +22,8 @@ const PostsNewForm = (props, context) =>
             props.flash(context.intl.formatMessage({id: "posts.created_message"}), "success");
           }}
         />
+
+        <div className='cancel' onClick={e => {e.preventDefault(); props.closeModal();}}>Cancel</div>
       </div>
     </Components.ShowIf>
 
@@ -35,4 +40,4 @@ PostsNewForm.contextTypes = {
 
 PostsNewForm.displayName = "PostsNewForm";
 
-registerComponent('PostsNewForm', PostsNewForm, withRouter, withMessages);
+replaceComponent('PostsNewForm', PostsNewForm, withRouter, withMessages);

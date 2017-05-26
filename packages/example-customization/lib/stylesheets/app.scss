@@ -2,7 +2,7 @@
 @import '../utilities/mixins';
 
 body{
-  background: #EDEEF4;
+  background: $background;
   font-family: 'FaktProNormal', Helvetica, arial, sans-serif;
 
   .main{

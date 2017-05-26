@@ -49,9 +49,9 @@ class FormComponent extends Component {
 
       switch (this.props.control) {
         case "text":
-          return <Input         {...properties} type="text" />;
+          return <Input  placeholder="WTF is Virtual Reality?"       {...properties} type="text" />;
         case "textarea":
-          return <Textarea      {...properties} />;
+          return <Textarea placeholder="Add a description to your post..."      {...properties} />;
         case "checkbox":
           return <Checkbox      {...properties} />;
         case "checkboxgroup":
