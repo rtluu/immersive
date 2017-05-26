@@ -1,6 +1,7 @@
 @import '../utilities/global-variables';
 @import '../utilities/mixins';
 
+
 .header-wrapper{
   background: white;
   margin-bottom: 12px;
@@ -88,7 +89,7 @@
         text-decoration: none;
 
         &:hover{
-          color: #0275d8;
+          color: $link-blue;
         }
       }
 
@@ -118,7 +119,7 @@
                 padding: 4px 8px;
 
                 &:hover{
-                  color: #0275d8;
+                  color: $link-blue;
                 }
               }
 
@@ -222,7 +223,7 @@
             padding: 8px 16px;
 
             &:hover{
-              background: #0275d8;
+              background: $link-blue;
 
               span{
                 color: white;
