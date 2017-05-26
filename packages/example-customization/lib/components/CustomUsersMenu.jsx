@@ -7,6 +7,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Users from 'meteor/vulcan:users';
 import { withApollo } from 'react-apollo';
 
+
 const UsersMenu = ({currentUser, client}) =>
   <div className="users-menu">
     <Dropdown id="user-dropdown">

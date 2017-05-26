@@ -214,6 +214,30 @@
             }
           }
         }
+
+
+        .posts-new-form-message{
+          display: none;
+        }
+
+        .accounts-ui{
+          padding-top: 95px;
+          position: relative;
+          top: 0;
+          @include transition( none !important );
+          @include transform( translate( -50%, 0) );
+
+          .buttons{
+            button{
+              &:before{
+                top: 19px;
+              }
+            }
+            .switch{
+              top: 19px;
+            }
+          }
+        }
       }
     }
   }
