@@ -23,7 +23,7 @@ const UsersProfile = (props) => {
     return (
       <div className="page users-profile">
         <Components.HeadTags url={Users.getProfileUrl(user, true)} title={Users.getDisplayName(user)} />
-        <h2 className="page-title"><a href="/">Immersi.ve</a> <span>/</span> {Users.getDisplayName(user)}</h2>
+        <h2 className="page-title">{Users.getDisplayName(user)}</h2>
         {user.htmlBio ? <div className="users-bio" dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
         <ul className="users-info">
           {user.twitterUsername ? <li><a href={"http://twitter.com/" + user.twitterUsername}>@{user.twitterUsername}</a></li> : null }
