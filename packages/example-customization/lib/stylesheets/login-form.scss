@@ -26,7 +26,7 @@
       }
 
       input{
-        background: #FAFAFA;
+        background: #FFF;
         border: 1px solid #DDDDDD;
         border-radius: 0;
         box-sizing: content-box;
@@ -115,7 +115,7 @@
       top: -72px;
 
       &:hover{
-        color: #0057FF;
+        color: $link-blue;
       }
 
       &.signup{
@@ -133,7 +133,7 @@
       text-decoration: underline;
 
       &:hover{
-        color: #0057FF;
+        color: $link-blue;
       }
     }
   }

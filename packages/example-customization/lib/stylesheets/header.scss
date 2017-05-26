@@ -129,7 +129,7 @@
             }
 
             .dropdown-menu{
-              border: 1px solid black;
+              border: 1px solid $dark-gray;
               border-radius: 0;
               top: 30px;
 
@@ -147,7 +147,7 @@
                   width: calc(100% - 32px);
 
                   &:hover{
-                    background: #fafafa;
+                    background: #FFF;
                   }
                 }
               }
@@ -187,14 +187,18 @@
             .users-menu-name, span{
               color: #8a8a8a;
               font-size: 14px;
-              padding: 2px 5px;
+              padding: 4px 16px;
+              &.caret{
+                display: none;
+                padding: 0;
+              }
             }
 
           }
 
 
           .dropdown-menu{
-            background: #FAFAFA;
+            background: #FFF;
             border: none;
             border-radius: 0;
             bottom: 0;
