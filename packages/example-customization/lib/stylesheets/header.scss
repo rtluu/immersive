@@ -85,7 +85,7 @@
         display: inline-block;
         font-size: 14px;
         padding: 4px 8px;
-        margin-right: 8px;
+        margin-right: 16px;
         text-decoration: none;
 
         &:hover{
@@ -149,7 +149,7 @@
                   width: calc(100% - 32px);
 
                   &:hover{
-                    background: #FFF;
+                    background: #F0F0F0;
                   }
                 }
               }
@@ -189,7 +189,7 @@
             .users-menu-name, span{
               color: #8a8a8a;
               font-size: 14px;
-              padding: 4px 16px;
+              padding: 4px 8px;
               &.caret{
                 display: none;
                 padding: 0;
