@@ -27,7 +27,7 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
       var cutUrl     = decodedUrl.split('url=http')[1] + '';
       cutUrl = cutUrl.split('://')[1] + '';
       cutUrl = cutUrl.split('/')[0] + '';
-      cutUrl = "" + cutUrl + "";
+      cutUrl = "<span className='paren'>(</span>" + cutUrl + "<span className='paren'>)</span>";
     }
 
     return (
@@ -54,9 +54,7 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
               {post.title + " "}
               <div className="source-container">
-                <span className="paren">(</span>
                 <div className="source">{cutUrl}</div>
-                <span className="paren">)</span>
               </div>
             </Link>
           </h3>
