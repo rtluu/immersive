@@ -90,6 +90,7 @@
 
         &:hover{
           color: $link-blue;
+          text-decoration: underline;
         }
       }
 
@@ -120,6 +121,7 @@
 
                 &:hover{
                   color: $link-blue;
+                  text-decoration: underline;
                 }
               }
 
