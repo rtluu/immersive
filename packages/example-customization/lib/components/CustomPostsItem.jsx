@@ -23,11 +23,13 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
     if( isLink === -1){
       var cutUrl = "";
     } else{
+      var parenLeft = "(";
+      var parentRight = ")"
       var decodedUrl = decodeURIComponent(Posts.getLink(post));
       var cutUrl     = decodedUrl.split('url=http')[1] + '';
       cutUrl = cutUrl.split('://')[1] + '';
       cutUrl = cutUrl.split('/')[0] + '';
-      cutUrl = "<span className='paren'>(</span>" + cutUrl + "<span className='paren'>)</span>";
+      cutUrl = "" + cutUrl + "";
     }
 
     return (
@@ -54,7 +56,9 @@ class CustomPostsItem extends getRawComponent('PostsItem') {
             <Link to={Posts.getLink(post)} className="posts-item-title-link" target={Posts.getLinkTarget(post)}>
               {post.title + " "}
               <div className="source-container">
+                <span className='paren'>{parenLeft}</span>
                 <div className="source">{cutUrl}</div>
+                <span className='paren'>{parentRight}</span>
               </div>
             </Link>
           </h3>
