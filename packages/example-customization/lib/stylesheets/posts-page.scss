@@ -13,6 +13,10 @@
     padding: 24px 0;
     position: relative;
 
+    .posts-thumbnail{
+      display: none;
+    }
+
     .posts-item-vote{
       position: absolute;
       margin-right: 16px;
