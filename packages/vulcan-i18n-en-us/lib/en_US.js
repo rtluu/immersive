@@ -39,8 +39,8 @@ addStrings('en', {
   "forms.submitComment": "Comment",
   "forms.cancel": "Cancel",
   "forms.select_option": "-- select option --",
-  "forms.delete": "Delete",
-  "forms.delete_confirm": "Delete document?",
+  "forms.delete": "Delete your account",
+  "forms.delete_confirm": "Are you sure you want to delete your account?",
 
   "posts.new_post": "Submit Post",
   "posts.edit": "Edit post",

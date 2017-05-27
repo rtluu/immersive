@@ -277,6 +277,13 @@
               border-radius: 0;
               padding: 12px 16px 8px 16px;
 
+              &:before{
+                content: 'Comment';
+                color: $link-blue;
+                font-size: 14px;
+                position: relative;
+              }
+
               span{
                 color: $link-blue;
                 font-size: 14px;
@@ -284,7 +291,7 @@
 
               &:hover{
                 background: $link-blue;
-                span{
+                &:before{
                   color: white;
                 }
 
@@ -382,6 +389,13 @@
                     border-radius: 0;
                     padding: 12px 16px 8px 16px;
 
+                    &:before{
+                      content: 'Comment';
+                      color: $link-blue;
+                      font-size: 14px;
+                      position: relative;
+                    }
+
                     span{
                       color: $link-blue;
                       font-size: 14px;
@@ -389,7 +403,7 @@
 
                     &:hover{
                       background: $link-blue;
-                      span{
+                      &:before{
                         color: white;
                       }
 

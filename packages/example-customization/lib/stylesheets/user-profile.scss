@@ -43,18 +43,76 @@
   }
 
   .document-edit {
-    .btn-primary {
-      border-radius: 0;
-      background-color: $success-green;
-      border-color: $success-green;
-      margin-left: 24px;
+    position: relative;
+
+    .form-section{
+      padding-bottom: 0;
+
+      .input-groups{
+        display: none;
+      }
+
+      .input-isAdmin{
+
+        .form-group{
+          margin: 7px 0 0 0;
+          position: absolute;
+          right: 24px;
+
+          .control-label{
+            display: none;
+          }
+          .col-sm-9{
+            float: none;
+            padding: 0;
+            width: 100%;
+            .checkbox{
+              position: relative;
+            }
+          }
+        }
+      }
     }
+
+    button {
+      border-radius: 0;
+      background-color: white;
+      border-color: $background;
+      margin: 0 0 24px 24px;
+
+      &:before{
+        content: 'Save';
+        color: $success-green;
+        font-size: 14px;
+        position: relative;
+      }
+
+      &:hover{
+        background: $success-green;
+        &:before{
+          color: white;
+        }
+
+      }
+    }
+
     .users-delete-link {
-      margin: 16px 0 36px 24px;
+      color: $light-gray;
+      font-size: 14px;
+      position: absolute;
+      margin: 24px 24px;
+
+      &:hover{
+        color: #cb2431;
+      }
 
       .fa-fw {
         display: none;
       }
+    }
+
+    hr{
+      display: none;
     }
   }
 

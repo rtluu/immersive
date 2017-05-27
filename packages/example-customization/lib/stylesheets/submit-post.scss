@@ -229,9 +229,19 @@
                 font-size: 14px;
                 padding: 12px 16px 8px 16px;
 
+                &:before{
+                  content: 'Post to community';
+                  color: $link-blue;
+                  font-size: 14px;
+                  position: relative;
+                }
+
                 &:hover{
                   background: $link-blue;
-                  color: white;
+                  &:before{
+                    color: white;
+                  }
+
                 }
               }
             }
@@ -248,6 +258,7 @@
 
             &:hover{
               color: $link-blue;
+              text-decoration: underline;
             }
           }
         }
