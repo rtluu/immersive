@@ -183,6 +183,16 @@
                       .control-label{
                         display: none;
                       }
+
+                      .col-sm-9{
+                        textarea{
+                          &::placeholder:before{
+                            content: 'Add a description to your post...';
+                            font-size: 14px;
+                            position: relative;
+                          }
+                        }
+                      }
                     }
                   }
 

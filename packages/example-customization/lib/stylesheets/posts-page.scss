@@ -1,0 +1,472 @@
+@import '../utilities/global-variables';
+@import '../utilities/mixins';
+
+.posts-page{
+  background: white;
+  padding: 0 24px;
+  position: relative;
+
+  .posts-item{
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 24px 0;
+    position: relative;
+
+    .posts-item-vote{
+      position: absolute;
+      margin-right: 16px;
+      top: 24px;
+
+      .vote{
+        cursor: pointer;
+
+        &:hover{
+          .upvote-button{
+            opacity: 0.8;
+
+            .vote-count{
+              opacity: 0.8;
+            }
+          }
+        }
+
+        &.upvoted{
+          .upvote-button{
+            &:before{
+              background: black;
+            }
+
+
+            .upvote{
+              opacity: 0.8;
+              -webkit-filter: brightness(0) invert(1);
+                 -moz-filter: brightness(0) invert(1);
+                   -o-filter: brightness(0) invert(1);
+                      filter: brightness(0) invert(1);
+            }
+            .vote-count{
+              color: black;
+            }
+          }
+        }
+
+        .upvote-button{
+          background: none;
+          border: 0;
+          height: 30px;
+          padding: 0;
+          position: relative;
+          width: 30px;
+
+          &:before{
+            content: '';
+            background: #e8e8e8;
+            border-radius: 50%;
+            height: 30px;
+            position: absolute;
+            width: 30px;
+          }
+
+
+          .upvote{
+            background-image: url("/upvote.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10px 6px;
+            height: 6px;
+            width: 10px;
+            z-index: 1;
+          }
+
+          .vote-count{
+            bottom: -24px;
+            font-size: 14px;
+            padding-top: 3px;
+            position: absolute;
+            width: 30px;
+          }
+        }
+      }
+    }
+
+    .posts-item-comments{
+      position: absolute;
+      margin-right: 24px;
+      left: 46px;
+      top: 24px;
+
+      &:hover{
+        .comment-button{
+          opacity: 0.8;
+
+          span{
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .comment-button{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background: #e8e8e8;
+        border: 0;
+        border-radius: 50%;
+        height: 30px;
+        position: relative;
+        width: 30px;
+
+        .comment-icon{
+          background-image: url("/comment.svg");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 10px 10px;
+          height: 10px;
+          width: 10px;
+        }
+
+        span{
+          bottom: -24px;
+          color: black;
+          font-size: 14px;
+          padding-top: 3px;
+          position: absolute;
+          text-align: center;
+          width: 30px;
+        }
+      }
+    }
+
+
+    .posts-item-content{
+      margin-left: 100px;
+
+      .posts-item-title{
+        font-family: 'FaktProMedium';
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 4px;
+        margin-top: -4px;
+        position: relative;
+
+        .source-container{
+          display: inline-block;
+          position: relative;
+
+          .paren{
+            display: inline-block;
+            font-family: 'FaktProNormal';
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+          }
+
+          .source{
+            font-family: 'FaktProNormal';
+            color: $link-blue;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 26px;
+            margin: 0 2px;
+
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+
+      .posts-item-meta{
+        color: #8a8a8a;
+        font-size: 14px;
+
+        .posts-item-date{
+          margin-right: 12px;
+        }
+
+        .posts-item-user{
+          text-decoration: underline;
+
+          .users-avatar{
+            display: none !important;
+          }
+
+          a{
+            color: #8a8a8a;
+            margin-right: 12px;
+
+            &:hover{
+              color: $link-blue;
+            }
+          }
+        }
+
+        .posts-stats{
+          display: none;
+        }
+
+        .posts-actions{
+          .modal-trigger{
+            a{
+              color: #8a8a8a;
+
+              &:hover{
+                color: $link-blue;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .posts-commenters{
+      display: none;
+    }
+  }
+
+
+  .posts-page-body{
+    p{
+      font-size: 16px;
+    }
+  }
+
+  .posts-comments-thread{
+    border-top: 0;
+    padding: 0;
+    margin: 20px 0 0 0;
+
+    .posts-comments-thread-new{
+
+      //Hide New Comment Header
+      h4{
+        display: none;
+      }
+
+      .comments-new-form{
+
+        .document-new{
+
+          form{
+
+            .form-section{
+
+              .input-body{
+                .form-control{
+                  border: 1px solid $background;
+                  border-radius: 0;
+                  padding: 20px 24px;
+
+                }
+              }
+            }
+
+            button{
+              background: none;
+              border: 1px solid $background;
+              border-radius: 0;
+              padding: 12px 16px 8px 16px;
+
+              span{
+                color: $link-blue;
+                font-size: 14px;
+              }
+
+              &:hover{
+                background: $link-blue;
+                span{
+                  color: white;
+                }
+
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    .posts-comments-thread-title{
+      display: none;
+    }
+
+    .comments-list{
+      padding: 24px 0 20px 0;
+      margin: 24px 0 0 0;
+
+      &:before{
+        background: $background;
+        content: '';
+        height: 1px;
+        display: block;
+        left: -24px;
+        position: relative;
+        top: -25px;
+        width: calc(100% + 48px);
+      }
+      p{
+        display: none;
+        margin-bottom: 0;
+      }
+
+      .comments-node{
+        p{
+          display: block;
+        }
+
+        .comments-item{
+          margin: 0;
+
+          .comments-item-body{
+            border: 0;
+            padding: 0;
+
+            .comments-item-meta{
+              margin-bottom: 0;
+
+              .comments-item-vote{
+                position: relative;
+                margin-right: 24px;
+                top: 0px;
+
+                .vote{
+                  cursor: pointer;
+
+                  &:hover{
+                    .upvote-button{
+                      opacity: 0.8;
+
+                      .vote-count{
+                        opacity: 0.8;
+                      }
+                    }
+                  }
+
+                  &.upvoted{
+                    .upvote-button{
+                      &:before{
+                        background: black;
+                      }
+
+
+                      .upvote{
+                        opacity: 0.8;
+                        -webkit-filter: brightness(0) invert(1);
+                           -moz-filter: brightness(0) invert(1);
+                             -o-filter: brightness(0) invert(1);
+                                filter: brightness(0) invert(1);
+                      }
+                      .vote-count{
+                        color: black;
+                      }
+                    }
+                  }
+
+                  .upvote-button{
+                    background: none;
+                    border: 0;
+                    height: 30px;
+                    padding: 0;
+                    position: relative;
+                    width: 30px;
+
+                    &:before{
+                      content: '';
+                      background: #e8e8e8;
+                      border-radius: 50%;
+                      height: 30px;
+                      position: absolute;
+                      width: 30px;
+                    }
+
+
+                    .upvote{
+                      background-image: url("/upvote.svg");
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: 10px 6px;
+                      height: 6px;
+                      width: 10px;
+                      z-index: 1;
+                    }
+
+                    .vote-count{
+                      bottom: -24px;
+                      font-size: 14px;
+                      padding-top: 3px;
+                      position: absolute;
+                      width: 30px;
+                    }
+                  }
+                }
+              }
+
+              .users-avatar{
+                display: none !important;
+              }
+
+              .users-name{
+                color: black;
+                position: relative;
+                text-decoration: underline;
+                top: -8px;
+
+                &:hover{
+                  color: $link-blue;
+                }
+              }
+
+              .comments-item-date{
+                color: $dark-gray;
+                font-size: 16px;
+                position: relative;
+                top: -8px;
+              }
+
+              div{
+                .comment-edit{
+                  color: black;
+                  font-size: 16px;
+                  position: relative;
+                  top: -8px;
+
+                  &:hover{
+                    color: $link-blue;
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+
+            .comments-item-text{
+              left: 54px;
+              position: relative;
+              top: -5px;
+              width: calc(100% - 54px);
+
+              .comments-item-reply-link{
+                font-size: 16px;
+                position: absolute;
+                right: 0;
+                top: -30px;
+
+                &:hover{
+                  color: $link-blue;
+                  text-decoration: underline;
+                }
+
+                i{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
