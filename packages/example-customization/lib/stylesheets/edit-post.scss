@@ -1,0 +1,295 @@
+@import '../utilities/global-variables';
+@import '../utilities/mixins';
+
+.modal-open{
+  #react-app{
+    .wrapper{
+      .main{
+        .content{
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.modal-backdrop{
+  display: none;
+  @include transition( none !important );
+  @include transform( none !important );
+}
+
+.modal{
+  overflow: visible !important;
+  @include transition( none !important );
+  @include transform( none !important );
+
+}
+
+.modal{
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+  top: 119px;
+  width: 1020px;
+  @include transition( none !important );
+  @include transform( none !important );
+
+  .modal-dialog{
+    background: white;
+    bottom: auto;
+    left: auto;
+    padding: 40px 56px;
+    width: 664px;
+    pointer-events: all;
+    position: relative;
+    right: auto;
+    top: auto;
+    @include transition( none !important );
+    @include transform( none !important );
+
+    .modal-content{
+      background: white;
+
+      .modal-header{
+        background: $background;
+        height: 55px;
+        left: -56px;
+        top: -95px;
+        position: absolute;
+        width: 664px;
+
+        .close{
+          left: -10px;
+          float: none;
+          position: relative;
+          top: 13px;
+        }
+      }
+      .modal-body{
+
+        .posts-edit-form{
+
+          .posts-edit-form-admin{
+            margin-bottom: 0;
+            .posts-edit-form-id{
+              display: none;
+            }
+            .edit-headline{
+              font-family: 'FaktProSemiBold';
+              font-size: 21px;
+            }
+
+            .posts-stats{
+              display: none;
+            }
+          }
+
+          .document-edit{
+            position: relative;
+            form{
+
+              .form-errors{
+                position: absolute;
+                left: 116px;
+                margin-top: 1px;
+                pointer-events: none;
+                z-index: 1;
+
+                .flash-message{
+                  border: none;
+                  background: none;
+                  font-size: 14px;
+                }
+              }
+
+              .form-section{
+
+                &:nth-child(3){
+                  display: none;
+                }
+
+                div{
+
+                  .form-group{
+                    margin-bottom: 16px;
+                    .control-label{
+                      font-size: 14px;
+                    }
+                    .col-sm-9{
+
+                      .form-control{
+                        border-radius: 0;
+                        border: 1px solid $background;
+                        color: black;
+                        font-size: 14px;
+                        padding: 12px 16px 8px 16px;
+                        line-height: 20px;
+
+                        &::placeholder{
+                          color: $light-gray;
+                        }
+                      }
+                    }
+                  }
+
+                  //Have to Switch Places with URL
+                  &.input-title{
+                    margin: 0;
+                    position: absolute;
+                    top: 13px;
+                    width: 100%;
+
+                    .form-group{
+                      margin: 0;
+
+                      .control-label{
+                        padding: 0;
+
+                        &:after{
+                          color: $light-gray;
+                          content: '* (required)';
+                          display: inline-block;
+                          font-size: 14px;
+                        }
+                      }
+
+                      .col-sm-9{
+                        padding: 0;
+                      }
+                    }
+                  }
+
+                  //^^
+                  &.input-url{
+                    position: relative;
+                    padding-top: 104px;
+
+                    .embedly-form-group{
+
+                      .embedly-form-control{
+
+                        .embedly-url-field{
+                          margin: 0;
+                        }
+                      }
+                    }
+
+                    .embedly-thumbnail{
+                      display: none;
+                    }
+                  }
+
+                  &.input-body{
+                    .form-group{
+                      .control-label{
+                        display: none;
+                      }
+
+                      .col-sm-9{
+                        textarea{
+                          &::placeholder:before{
+                            content: 'Add a description to your post...';
+                            font-size: 14px;
+                            position: relative;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  &.input-categories{
+                    display: none;
+                  }
+
+                  &.input-color{
+                    display: none;
+                  }
+
+                  .form-group{
+
+                    .control-label{
+                      display: block;
+                      float: none;
+                      width: 100%;
+                    }
+
+                    .col-sm-9{
+                      display: block;
+                      width: 100%;
+                    }
+                  }
+
+                }
+              }
+
+              button{
+                background: none;
+                border-radius: 0;
+                border: 1px solid $background;
+                color: $link-blue;
+                font-size: 14px;
+                padding: 12px 16px 8px 16px;
+
+                &:before{
+                  content: 'Post to community';
+                  color: $link-blue;
+                  font-size: 14px;
+                  position: relative;
+                }
+
+                &:hover{
+                  background: $link-blue;
+                  &:before{
+                    color: white;
+                  }
+
+                }
+              }
+            }
+          }
+
+          .cancel{
+            bottom: 3px;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            left: 173px;
+            padding: 4px 8px;
+            position: absolute;
+
+            &:hover{
+              color: $link-blue;
+              text-decoration: underline;
+            }
+          }
+        }
+
+
+        .posts-new-form-message{
+          display: none;
+        }
+
+        .accounts-ui{
+          padding-top: 95px;
+          position: relative;
+          top: 0;
+          @include transition( none !important );
+          @include transform( translate( -50%, 0) );
+
+          .buttons{
+            button{
+              &:before{
+                top: 19px;
+              }
+            }
+            .switch{
+              top: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
