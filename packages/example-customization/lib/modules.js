@@ -12,6 +12,7 @@ import "./fragments.js";
 // custom components
 import "./components/MyCustomPage.jsx";
 import "./components/CustomPostsItem.jsx";
+import "./components/CustomPostsEditForm.jsx";
 import "./components/CustomHeader.jsx";
 import "./components/CustomFooter.jsx";
 import "./components/CustomLayout.jsx";

@@ -16,6 +16,7 @@ Package.onUse( function(api) {
 
   api.addFiles([
     'lib/stylesheets/app.scss',
+    'lib/stylesheets/edit-post.scss',
     'lib/stylesheets/header.scss',
     'lib/stylesheets/hide-components.scss',
     'lib/stylesheets/guidelines.scss',
