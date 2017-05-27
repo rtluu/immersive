@@ -21,6 +21,7 @@ Package.onUse( function(api) {
     'lib/stylesheets/guidelines.scss',
     'lib/stylesheets/login-form.scss',
     'lib/stylesheets/posts.scss',
+    'lib/stylesheets/posts-page.scss',
     'lib/stylesheets/submit-login-form.scss',
     'lib/stylesheets/submit-post.scss',
     'lib/stylesheets/user-profile.scss',

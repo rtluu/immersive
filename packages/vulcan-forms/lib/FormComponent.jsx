@@ -47,11 +47,13 @@ class FormComponent extends Component {
 
     } else { // else pick a predefined component
 
+      console.log(properties.options);
+
       switch (this.props.control) {
         case "text":
-          return <Input  placeholder="WTF is Virtual Reality?"       {...properties} type="text" />;
+          return <Input        {...properties} type="text" />;
         case "textarea":
-          return <Textarea placeholder="Add a description to your post..."      {...properties} />;
+          return <Textarea    {...properties} />;
         case "checkbox":
           return <Checkbox      {...properties} />;
         case "checkboxgroup":

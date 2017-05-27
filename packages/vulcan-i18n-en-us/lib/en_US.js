@@ -36,6 +36,7 @@ addStrings('en', {
   "accounts.logging_in": "Logging in…",
 
   "forms.submit": "Post to community",
+  "forms.submitComment": "Comment",
   "forms.cancel": "Cancel",
   "forms.select_option": "-- select option --",
   "forms.delete": "Delete",
@@ -87,7 +88,7 @@ addStrings('en', {
   "comments.comments": "Comments",
   "comments.count": "{count, plural, =0 {0} one {# } other {# }}",
   "comments.new": "New Comment",
-  "comments.no_comments": "No comments to display.",
+  "comments.no_comments": "Start the discussion with a comment",
   "comments.reply": "Reply",
   "comments.edit": "Edit",
   "comments.delete": "Delete",
