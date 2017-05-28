@@ -25,7 +25,7 @@ const Layout = ({currentUser, children}) =>
         <h5 className="guidelines-header">GUIDELINES</h5>
         <div className="guidelines-inner">
           <h4 className="guidelines-title">Immersi.ve Info</h4>
-          <p className="guidelines-text">We have created a community that is driven by sharing VR. Members ask questions and share what’s new in VR. To contribute to this community you must <a href="#">request an invite…</a> Anyone can browse.</p>
+          <p className="guidelines-text">We have created a community that is driven by sharing virtual reality. Members ask questions and share what’s new regarding topics such as WebVR. To contribute to this community you must <a href="#">request an invite…</a> Anyone can browse.</p>
           <p className="guidelines-text">Read our guidelines <a href="#">here</a>.</p>
           <p className="guidelines-text">Just be nice we are a community. Reach out to us <a href="#">@immersive</a>.</p>
         </div>
