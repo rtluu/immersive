@@ -76,13 +76,14 @@
 
     button {
       border-radius: 0;
-      background-color: white;
-      border-color: $background;
+      border-color: $success-green;
+      background-color: $success-green;
       margin: 0 0 24px 24px;
 
       &:before{
-        content: 'Save';
-        color: $success-green;
+        background: $success-green;
+        content: 'Save Changes';
+        color: white;
         font-size: 14px;
         position: relative;
       }
