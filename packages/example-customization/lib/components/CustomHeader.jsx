@@ -16,14 +16,15 @@ const Header = (props, context) => {
           <a href="/">
             <div className="logo-mark" />
           </a>
-        </div>
-
-
-        <div className="nav-right">
 
           <a className="home-link" href="/">
             <div className="discussion">Discussion</div>
           </a>
+
+        </div>
+
+
+        <div className="nav-right">
 
           <div className="nav-user">
             {!!props.currentUser ? <Components.UsersMenu/> : <Components.UsersAccountMenu/>}
