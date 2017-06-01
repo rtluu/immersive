@@ -40,7 +40,7 @@ addStrings('en', {
   "forms.cancel": "Cancel",
   "forms.select_option": "-- select option --",
   "forms.delete": "Delete your account",
-  "forms.delete_confirm": "Are you sure you want to delete your account?",
+  "forms.delete_confirm": "Are you sure that you would like to complete this action?",
 
   "posts.new_post": "Submit Post",
   "posts.edit": "Edit post",
