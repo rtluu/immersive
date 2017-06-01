@@ -23,6 +23,7 @@ import "./components/CustomPostsNewForm.jsx";
 import "./components/CustomPostsPage.jsx"
 import "./components/CustomPostsViews.jsx";
 import "./components/CustomVote.jsx";
+import "./components/CustomUsersEditForm.jsx";
 import "./components/CustomUsersMenu.jsx";
 import "./components/CustomUsersProfile.jsx"
 

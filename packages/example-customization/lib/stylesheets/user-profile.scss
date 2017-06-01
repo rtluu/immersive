@@ -1,9 +1,22 @@
 @import '../utilities/global-variables';
 @import '../utilities/mixins';
 
-.page, .users-profile{
+.page, .users-profile, .users-edit-form{
   background-color: white;
   margin: 0 0 80px 0;
+
+  .back-link{
+    color: #999;
+    position: absolute;
+    left: 0px;
+    top: -23px;
+    text-decoration: none;
+
+    .back-text{
+      font-size: 12px;
+      text-decoration: underline;
+    }
+  }
 
   .page-title{
     background-color: white;
@@ -82,7 +95,7 @@
 
       &:before{
         background: $success-green;
-        content: 'Save Changes';
+        content: 'Save Edits';
         color: white;
         font-size: 14px;
         position: relative;
