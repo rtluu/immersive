@@ -228,9 +228,11 @@
           }
 
           .posts-actions{
+
             .modal-trigger{
               a{
                 color: #8a8a8a;
+                text-decoration: underline;
 
                 &:hover{
                   color: $link-blue;
