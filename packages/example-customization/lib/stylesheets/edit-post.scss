@@ -248,6 +248,39 @@
                 }
               }
             }
+
+            div{
+              hr{
+                display: none;
+              }
+              i{
+                display: none;
+              }
+              a{
+                bottom: 0px;
+                margin: 3px 0;
+                padding: 4px;
+                position: absolute;
+                right: -4px;
+
+                &:hover{
+                  &:before{
+                    color: #cb2431;
+                  }
+                }
+
+                &:before{
+                  color: $light-gray;
+                  content: 'Delete post';
+                  display: block;
+                  font-size: 14px;
+                  position: relative;
+                }
+                span{
+                  display: none;
+                }
+              }
+            }
           }
 
           .cancel{
