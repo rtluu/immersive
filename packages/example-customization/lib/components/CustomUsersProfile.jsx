@@ -22,6 +22,9 @@ const UsersProfile = (props) => {
 
     return (
       <div className="page users-profile">
+        <a href="javascript:history.back()" className="back-link">
+          <h5 className="back-text">BACK</h5>
+        </a>
         <Components.HeadTags url={Users.getProfileUrl(user, true)} title={Users.getDisplayName(user)} />
         <h2 className="page-title">{Users.getDisplayName(user)}</h2>
         {user.htmlBio ? <div className="users-bio" dangerouslySetInnerHTML={{__html: user.htmlBio}}></div> : null }
