@@ -304,6 +304,7 @@
 
               &:hover{
                 background: $link-blue;
+                border: 1px solid $link-blue;
                 &:before{
                   color: white;
                 }
@@ -415,6 +416,7 @@
                     }
 
                     &:hover{
+                      border: 1px solid $link-blue;
                       background: $link-blue;
                       &:before{
                         color: white;

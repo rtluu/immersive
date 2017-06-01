@@ -238,6 +238,7 @@
 
                 &:hover{
                   background: $link-blue;
+                  border: 1px solid $link-blue;
                   &:before{
                     color: white;
                   }
@@ -249,17 +250,13 @@
 
           .cancel{
             bottom: 3px;
-            color: black;
+            color: $dark-gray;
+            font-size: 14px;
             cursor: pointer;
             display: inline-block;
-            left: 173px;
+            left: 164px;
             padding: 4px 8px;
             position: absolute;
-
-            &:hover{
-              color: $link-blue;
-              text-decoration: underline;
-            }
           }
         }
 
